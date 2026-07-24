@@ -10,6 +10,88 @@ SATF is a vendor-neutral framework for establishing, enforcing, validating, reas
 
 Trust is not granted once. Trust is dynamic. Trust is established, consumed, validated, reassessed, adapted, and revoked or re-established when needed.
 
+# Why SATF Exists
+
+Traditional security frameworks focus on securing identities, access, resources, networks, and applications.
+
+Autonomous agents introduce a different challenge.
+
+The fundamental objective is no longer simply protecting access.
+
+The objective is ensuring that autonomous agents consistently produce secure outcomes.
+
+SATF helps organizations achieve:
+
+- Safe Outcomes
+- Trusted Outcomes
+- Compliant Outcomes
+- Resilient Outcomes
+- Expected Outcomes
+
+---
+
+## What Is a Secure Outcome?
+
+A secure outcome is:
+
+- The right action
+- Performed by the right agent
+- For the right objective
+- Using the right authority
+- Within approved boundaries
+- With continuous validation
+- With recoverable trust
+
+SATF continuously evaluates trust throughout the agent lifecycle to ensure that task completion never overrides secure outcomes.
+
+---
+
+# SATF Outcome Model
+
+SATF capabilities exist to achieve secure outcomes.
+
+| SATF Capability | Primary Outcome Role |
+|-----------------|----------------------|
+| Agent Trust Fabric | Assess |
+| Ring 1: Trust Establishment | Prevent |
+| Ring 2: Trust Enforcement | Prevent + Enforce |
+| Ring 3: Trust Validation | Detect + Validate |
+| Governance, Telemetry & Assurance Control Plane | Adapt + Assure |
+| Runtime & Response Plane | Contain + Recover + Re-establish |
+
+---
+
+## SATF Core Principle
+
+```text
+                    SECURE OUTCOMES
+
+     Safe • Trusted • Compliant • Resilient • Expected
+
+                           ↑
+
+        Assess • Prevent • Enforce • Detect • Validate
+                  • Adapt • Contain • Recover
+                  • Re-establish Trust
+
+                           ↑
+
+                  Agent Trust Fabric
+                      Trust Rings
+                      Control Plane
+                      Runtime Plane
+```
+
+The controls are not the goal.
+
+**Secure outcomes are the goal.**
+
+SATF exists to ensure autonomous agents consistently produce safe, trusted, compliant, resilient, and expected outcomes, even when objectives evolve, context changes, authority is delegated, tools expand, threats emerge, and trust must be continuously reassessed.
+
+---
+## Control Mapping Matrix
+![Control_Mapping](assets/diagrams/SATF_Control_Mapping_Diagram_v3.png)
+---
 ## Framework structure
 
 SATF Baseline 1.0 uses three coordinated views:
