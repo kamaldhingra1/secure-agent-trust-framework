@@ -183,6 +183,18 @@ flowchart TD
 ---
 
 ## Control Mapping Matrix
+
+The Secure Agent Trust Framework (SATF) Control Mapping Matrix helps security architects, product security teams, platform engineers, governance teams, and auditors understand how SATF capabilities work together to prevent, detect, validate, contain, recover from, and ultimately re-establish trust following agent failures.
+
+Rather than asking:
+
+> Which security control should I deploy?
+
+SATF asks:
+
+> Which framework capabilities should work together to ensure secure outcomes when autonomous agents encounter risk, uncertainty, or compromise?
+
+- [How to read this diagram](docs/11-satf-in-action/SATF-Control-Mapping-Matrix/satf-control-mapping-matrix-introduction.md)
 ![Control_Mapping](assets/diagrams/SATF_Control_Mapping_Diagram_v3.png)
 ---
 ## Framework structure
