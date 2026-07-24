@@ -1,5 +1,7 @@
 # Secure Agent Trust Framework (SATF) Baseline 1.0
 
+![App Logo](assets/diagrams/satf-baseline-1.0-framework.png)
+
 **End-to-End Enterprise Framework for Autonomous Agent Governance and Contextual Security**
 
 SATF is a vendor-neutral framework for establishing, enforcing, validating, reassessing, adapting, and revoking trust in autonomous agent systems.
