@@ -219,6 +219,11 @@ SATF Baseline 1.0 uses three coordinated views:
 - [Maturity Model](docs/07-maturity-model/README.md)
 - [Alignment Mapping](docs/08-alignment-mapping/README.md)
 - [Control Catalog](docs/09-control-catalog/README.md)
+- [SATF In Action](docs/11-satf-in-action/README.md)
+- [FAQ](docs/12-faq/README.md)
+- [Pattern Library](docs/12-pattern-library/README.md)
+- [Tech Reference](docs/13-technical-reference/README.md)
+- [Appendices](docs/10-appendices/README.md)
 
 ## Baseline 1.0 status
 
