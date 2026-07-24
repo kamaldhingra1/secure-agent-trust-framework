@@ -17,7 +17,7 @@ SATF asks:
 ---
 
 ## How to Read the Control Mapping Diagram
-
+![Control_Mapping](assets/diagrams/SATF_Control_Mapping_Diagram_v3.png)
 The diagram should be read from top to bottom.
 
 ### 1. Failure Scenario
