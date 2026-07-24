@@ -1,4 +1,5 @@
 # Secure Agent Trust Framework (SATF) Baseline 1.0
+### Safe, Trusted, Compliant, Resilient, and Expected Outcomes
 
 ![App Logo](assets/diagrams/satf-baseline-1.0-framework.png)
 
