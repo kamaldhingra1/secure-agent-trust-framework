@@ -1,0 +1,56 @@
+flowchart TD
+    %% INPUT
+    REQ["<b>Agent Execution Request</b><br/>Goal, Tools & Task Scope"] --> FABRIC
+
+    %% LAYER 1: TRUST FABRIC & RINGS
+    subgraph CAPABILITIES["1. SATF Capability & Control Engine"]
+        FABRIC["<b>Agent Trust Fabric</b><br/><i>[Assess]</i> Real-Time Trust Scoring"]
+        
+        subgraph RINGS["Trust Rings"]
+            R1["<b>Ring 1: Establishment</b><br/><i>[Prevent]</i> Identity & Sandbox"]
+            R2["<b>Ring 2: Enforcement</b><br/><i>[Enforce]</i> Contextual PDP/PEP"]
+            R3["<b>Ring 3: Validation</b><br/><i>[Detect/Validate]</i> Rule of Two & Red Teaming"]
+        end
+    end
+
+    %% LAYER 2: OVERLAY & RUNTIME
+    subgraph CONTROLS["2. Control & Operational Execution Plane"]
+        R4["<b>Governance, Telemetry & Assurance</b><br/><i>[Adapt + Assure]</i> Policy Feeds & Evidence"]
+        RRP["<b>Runtime & Response Plane</b><br/><i>[Contain + Recover]</i> Isolation & Rollback"]
+    end
+
+    %% PIPELINE CONNECTORS
+    FABRIC --> R1 --> R2 --> R3
+    R4 -.->|Policy & Observability| CAPABILITIES
+    R3 -->|Evaluation Signal| RRP
+
+    %% DECISION GATE
+    RRP --> DECISION{"Is Execution & Output Validated?"}
+
+    %% DECISION PATHS
+    DECISION -- Yes --> OUTCOME
+    DECISION -- No / Drift Detected --> RECOVER["<b>Re-establish Trust / Containment</b><br/>Block, Revoke, Quarantine"]
+    RECOVER -.->|Continuous Reassessment| FABRIC
+
+    %% TARGET OBJECTIVE
+    subgraph OUTCOME["3. Primary Objective: SECURE OUTCOME"]
+        direction LR
+        O1["<b>Safe</b>"]
+        O2["<b>Trusted</b>"]
+        O3["<b>Compliant</b>"]
+        O4["<b>Resilient</b>"]
+        O5["<b>Expected</b>"]
+    end
+
+    %% STYLING
+    classDef req fill:#2b2d42,stroke:#8d99ae,color:#fff;
+    classDef cap fill:#1a365d,stroke:#2b6cb0,color:#fff;
+    classDef ctrl fill:#2c5282,stroke:#4299e1,color:#fff;
+    classDef gate fill:#742a2a,stroke:#e53e3e,color:#fff;
+    classDef outcome fill:#22543d,stroke:#38a169,stroke-width:2px,color:#fff;
+
+    class REQ req;
+    class FABRIC,R1,R2,R3 cap;
+    class R4,RRP ctrl;
+    class DECISION,RECOVER gate;
+    class O1,O2,O3,O4,O5 outcome;

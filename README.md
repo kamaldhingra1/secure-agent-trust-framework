@@ -63,32 +63,125 @@ SATF capabilities exist to achieve secure outcomes.
 
 ## SATF Core Principle
 
-```text
-                    SECURE OUTCOMES
-
-     Safe • Trusted • Compliant • Resilient • Expected
-
-                           ↑
-
-        Assess • Prevent • Enforce • Detect • Validate
-                  • Adapt • Contain • Recover
-                  • Re-establish Trust
-
-                           ↑
-
-                  Agent Trust Fabric
-                      Trust Rings
-                      Control Plane
-                      Runtime Plane
-```
-
 The controls are not the goal.
 
 **Secure outcomes are the goal.**
 
-SATF exists to ensure autonomous agents consistently produce safe, trusted, compliant, resilient, and expected outcomes, even when objectives evolve, context changes, authority is delegated, tools expand, threats emerge, and trust must be continuously reassessed.
+> SATF exists to ensure autonomous agents consistently produce safe, trusted, compliant, resilient, and expected outcomes, even when objectives evolve, context changes, authority is delegated, tools expand, threats emerge, and trust must be continuously reassessed.
 
+<div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; width: 100%; min-width: 0;">
+<div style="min-width: 0; overflow: visible;">
+  <p><b>Core Principle Pyramid (Objective over Control)</b> </p>
+
+```mermaid
+
+graph TD
+    %% --- TOP LAYER: THE GOAL ---
+    subgraph APEX["APEX OBJECTIVE"]
+        SO["<b>SECURE OUTCOMES</b><br/>Safe • Trusted • Compliant • Resilient • Expected"]
+    end
+
+    %% --- MIDDLE LAYER: DYNAMIC ACTIONS ---
+    subgraph ACTIONS["DYNAMIC ACTION ENGINE"]
+        direction LR
+        ACT1["<b>Assess</b><br/>(Trust Fabric)"]
+        ACT2["<b>Prevent & Enforce</b><br/>(Ring 1 & Ring 2)"]
+        ACT3["<b>Detect & Validate</b><br/>(Ring 3)"]
+        ACT4["<b>Adapt & Assure</b><br/>(Control Plane)"]
+        ACT5["<b>Contain & Recover</b><br/>(Runtime Plane)"]
+    end
+
+    %% --- BASE LAYER: FOUNDATIONAL ARCHITECTURE ---
+    subgraph BASE["FOUNDATIONAL CAPABILITIES"]
+        direction LR
+        ATF["Agent Trust Fabric"]
+        TR["Trust Rings (R1-R3)"]
+        CP["Control Plane (R4 Overlay)"]
+        RP["Runtime & Response Plane"]
+    end
+
+    %% RELATIONSHIPS (UPWARD FLOW)
+    BASE ==>|Powers| ACTIONS
+    ACTIONS ==>|Consistently Delivers| APEX
+
+    %% STYLING
+    classDef apex fill:#1b4332,stroke:#52b788,stroke-width:3px,color:#fff;
+    classDef action fill:#2d6a4f,stroke:#74c69d,stroke-width:2px,color:#fff;
+    classDef base fill:#081c15,stroke:#40916c,stroke-width:1px,color:#d8f3dc;
+
+    class SO apex;
+    class ACT1,ACT2,ACT3,ACT4,ACT5 action;
+    class ATF,TR,CP,RP base;
+```
+</div>
+<div style="min-width: 0; overflow: visible;">
+  <p><b>Comprehensive SATF Outcome Engine Flow</b> </p>
+
+```mermaid
+
+flowchart TD
+ 
+    %% INPUT
+    REQ["<b>Agent Execution Request</b><br/>Goal, Tools & Task Scope"] --> FABRIC
+
+    %% LAYER 1: TRUST FABRIC & RINGS
+    subgraph CAPABILITIES["1. SATF Capability & Control Engine"]
+        FABRIC["<b>Agent Trust Fabric</b><br/><i>[Assess]</i> Real-Time Trust Scoring"]
+        
+        subgraph RINGS["Trust Rings"]
+            R1["<b>Ring 1: Establishment</b><br/><i>[Prevent]</i> Identity & Sandbox"]
+            R2["<b>Ring 2: Enforcement</b><br/><i>[Enforce]</i> Contextual PDP/PEP"]
+            R3["<b>Ring 3: Validation</b><br/><i>[Detect/Validate]</i> Rule of Two & Red Teaming"]
+        end
+    end
+
+    %% LAYER 2: OVERLAY & RUNTIME
+    subgraph CONTROLS["2. Control & Operational Execution Plane"]
+        R4["<b>Governance, Telemetry & Assurance</b><br/><i>[Adapt + Assure]</i> Policy Feeds & Evidence"]
+        RRP["<b>Runtime & Response Plane</b><br/><i>[Contain + Recover]</i> Isolation & Rollback"]
+    end
+
+    %% PIPELINE CONNECTORS
+    FABRIC --> R1 --> R2 --> R3
+    R4 -.->|Policy & Observability| CAPABILITIES
+    R3 -->|Evaluation Signal| RRP
+
+    %% DECISION GATE
+    RRP --> DECISION{"Is Execution & Output Validated?"}
+
+    %% DECISION PATHS
+    DECISION -- Yes --> OUTCOME
+    DECISION -- No / Drift Detected --> RECOVER["<b>Re-establish Trust / Containment</b><br/>Block, Revoke, Quarantine"]
+    RECOVER -.->|Continuous Reassessment| FABRIC
+
+    %% TARGET OBJECTIVE
+    subgraph OUTCOME["3. Primary Objective: SECURE OUTCOME"]
+        direction LR
+        O1["<b>Safe</b>"]
+        O2["<b>Trusted</b>"]
+        O3["<b>Compliant</b>"]
+        O4["<b>Resilient</b>"]
+        O5["<b>Expected</b>"]
+    end
+
+    %% STYLING
+    classDef req fill:#2b2d42,stroke:#8d99ae,color:#fff;
+    classDef cap fill:#1a365d,stroke:#2b6cb0,color:#fff;
+    classDef ctrl fill:#2c5282,stroke:#4299e1,color:#fff;
+    classDef gate fill:#742a2a,stroke:#e53e3e,color:#fff;
+    classDef outcome fill:#22543d,stroke:#38a169,stroke-width:2px,color:#fff;
+
+    class REQ req;
+    class FABRIC,R1,R2,R3 cap;
+    class R4,RRP ctrl;
+    class DECISION,RECOVER gate;
+    class O1,O2,O3,O4,O5 outcome;
+
+```
+</div>
+</div>
 ---
+
 ## Control Mapping Matrix
 ![Control_Mapping](assets/diagrams/SATF_Control_Mapping_Diagram_v3.png)
 ---
