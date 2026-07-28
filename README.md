@@ -235,7 +235,7 @@ SATF Baseline 1.0 uses three coordinated views:
 - [SATF In Action](docs/11-satf-in-action/README.md)
 - [Threat Catalog](docs/12-threat-catalog/README.md)
 - [Ref Architectures](docs/13-reference-architectures/README.md)
-- [Implementation Patterns](docs/14-Implementation-patterns/trustops/README.md)
+- [Implementation Patterns](docs/14-implementation-patterns/trustops/README.md)
 - [Appendices](docs/10-appendices/)
 - [FAQ](docs/15-faq/frequently-asked-questions.md)
 
