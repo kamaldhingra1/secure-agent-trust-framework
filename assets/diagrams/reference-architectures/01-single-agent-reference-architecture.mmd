@@ -1,0 +1,25 @@
+flowchart TB
+    H[Human Controller / Business Owner]
+    A[Autonomous Agent]
+    ID[Agent Identity and Credentials]
+    ATF[Agent Trust Fabric]
+    PDP[Ring 2 PDP / PEP\nContextual Authorization]
+    TOOLS[Approved Tools / APIs / Data]
+    TEL[Telemetry and Evidence]
+    VAL[Ring 3 Validation]
+    GOV[Governance, Telemetry and Assurance]
+    RESP[Runtime Response\nContain, Recover, Re-establish]
+    OUT[Secure Outcomes]
+
+    H --> A
+    ID --> A
+    A --> ATF
+    ATF --> PDP
+    PDP --> TOOLS
+    TOOLS --> TEL
+    TEL --> VAL
+    VAL --> GOV
+    GOV --> PDP
+    PDP --> RESP
+    RESP --> OUT
+    GOV --> OUT

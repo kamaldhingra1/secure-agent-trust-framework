@@ -1,0 +1,19 @@
+flowchart TB
+    OUT[Secure Outcomes\nSafe | Trusted | Compliant | Resilient | Expected]
+    MT[Mission Trust\nContinuously justified confidence]
+    TO[TrustOps\nSATF implementation pattern]
+    F1[1 Establish Trust]
+    F2[2 Observe Trust]
+    F3[3 Evaluate Trust]
+    F4[4 Govern Trust]
+    F5[5 Recover Trust]
+    F6[6 Learn Trust]
+    F7[7 Measure Trust]
+    EVID[Evidence Inputs\nSecOps, MLOps, SRE, IAM, GRC, Platform, Product Security]
+    SATF[SATF Framework\nTrust Fabric, Rings, Control Plane, Runtime Plane]
+
+    SATF --> TO
+    EVID --> TO
+    TO --> F1 --> F2 --> F3 --> F4 --> F5 --> F6 --> F7 --> TO
+    TO --> MT
+    MT --> OUT

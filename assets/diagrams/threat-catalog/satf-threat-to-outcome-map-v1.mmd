@@ -1,0 +1,50 @@
+flowchart TB
+    Threats["SATF Agent Threats v1.0"]
+    Threats --> Mission["Mission & Goal Threats"]
+    Mission --> Safe["Safe Outcomes"]
+    Mission --> Expected["Expected Outcomes"]
+    Threats --> Delegation["Delegation & Authority Threats"]
+    Delegation --> Trusted["Trusted Outcomes"]
+    Delegation --> Compliant["Compliant Outcomes"]
+    Delegation --> Expected["Expected Outcomes"]
+    Threats --> Memory["Memory & Context Boundary Threats"]
+    Memory --> Trusted["Trusted Outcomes"]
+    Memory --> Compliant["Compliant Outcomes"]
+    Memory --> Expected["Expected Outcomes"]
+    Memory --> Resilient["Resilient Outcomes"]
+    Threats --> Tool["Tool & Action Threats"]
+    Tool --> Safe["Safe Outcomes"]
+    Tool --> Trusted["Trusted Outcomes"]
+    Tool --> Resilient["Resilient Outcomes"]
+    Threats --> Identity["Identity & Credential Threats"]
+    Identity --> Trusted["Trusted Outcomes"]
+    Identity --> Compliant["Compliant Outcomes"]
+    Identity --> Resilient["Resilient Outcomes"]
+    Threats --> Trust["Trust & Evidence Threats"]
+    Trust --> Trusted["Trusted Outcomes"]
+    Trust --> Resilient["Resilient Outcomes"]
+    Trust --> Expected["Expected Outcomes"]
+    Threats --> Oob["Out-of-Bound Agent Threats"]
+    Oob --> Safe["Safe Outcomes"]
+    Oob --> Trusted["Trusted Outcomes"]
+    Oob --> Compliant["Compliant Outcomes"]
+    Oob --> Resilient["Resilient Outcomes"]
+    Oob --> Expected["Expected Outcomes"]
+    classDef mission fill:#7c3aed,stroke:#ffffff,color:#ffffff
+    classDef delegation fill:#f59e0b,stroke:#ffffff,color:#111827
+    classDef memory fill:#0f766e,stroke:#ffffff,color:#ffffff
+    classDef tool fill:#2563eb,stroke:#ffffff,color:#ffffff
+    classDef identity fill:#dc2626,stroke:#ffffff,color:#ffffff
+    classDef trust fill:#16a34a,stroke:#ffffff,color:#ffffff
+    classDef oob fill:#c026d3,stroke:#ffffff,color:#ffffff
+    classDef root fill:#111827,stroke:#22d3ee,color:#ffffff
+    classDef outcome fill:#0f172a,stroke:#22d3ee,color:#ffffff
+    class Threats root
+    class Mission mission
+    class Delegation delegation
+    class Memory memory
+    class Tool tool
+    class Identity identity
+    class Trust trust
+    class Oob oob
+    class Safe,Trusted,Compliant,Resilient,Expected outcome

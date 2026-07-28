@@ -1,0 +1,22 @@
+flowchart TB
+    SO[Secure Outcomes\nSafe | Trusted | Compliant | Resilient | Expected]
+    CP[Governance, Telemetry and Assurance Control Plane\nAdapt + Assure]
+    ATF[Agent Trust Fabric\nAssess: Identity, Intent, Context, Goal, Risk, Behavior, Delegation]
+    R1[Ring 1: Trust Establishment\nPrevent: ownership, identity, least agency, sandboxing, supply chain, memory integrity]
+    R2[Ring 2: Trust Enforcement\nPrevent + Enforce: contextual authorization, PDP/PEP, objective boundaries, tool/data policy]
+    R3[Ring 3: Trust Validation\nDetect + Validate: goal integrity, UEBA, Rule of Two, adversarial testing, evidence]
+    RP[Runtime and Response Plane\nContain + Recover + Re-establish]
+    TEL[Telemetry, Evidence, Findings]
+    POL[Adaptive Trust Policies]
+
+    SO --> CP
+    CP --> POL
+    POL --> R2
+    R1 --> ATF
+    ATF --> R2
+    R2 --> RP
+    RP --> TEL
+    TEL --> R3
+    R3 --> CP
+    RP --> ATF
+    CP --> SO

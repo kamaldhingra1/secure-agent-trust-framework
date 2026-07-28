@@ -1,0 +1,26 @@
+flowchart TB
+    OUT[Secure Outcomes\nSafe | Trusted | Compliant | Resilient | Expected]
+    SOC[Security Analyst / Incident Commander]
+    AG[Autonomous Security Agent]
+    DET[Detection Sources\nSIEM, EDR, Cloud, AppSec, Network]
+    ATF[Agent Trust Fabric\nAssess mission, authority, context, risk, behavior]
+    PDP[Ring 2 PDP / PEP\nAction policy, approval gates, blast-radius limits]
+    SOAR[SOAR / Case Management\nPlaybooks, tasks, approvals]
+    ACT[Response Actions\nIsolate, block, revoke, quarantine]
+    VAL[Ring 3 Validation\nEvidence validation, false-positive checks, safety constraints]
+    GOV[Governance, Telemetry and Assurance\nPolicy, runbooks, audit evidence]
+    RESP[Runtime Response\nPause automation, rollback, recover, re-establish]
+
+    SOC --> AG
+    DET --> AG
+    AG --> ATF
+    ATF --> PDP
+    PDP --> SOAR
+    SOAR --> ACT
+    DET --> VAL
+    ACT --> VAL
+    VAL --> GOV
+    GOV --> PDP
+    PDP --> RESP
+    RESP --> OUT
+    GOV --> OUT

@@ -1,0 +1,78 @@
+flowchart LR
+    T01["SATF-T01<br/>Goal Overreach"]
+    T01 --> C03["C03 Goal Integrity"]
+    T01 --> C15["C15 Objective Boundary Enforcement"]
+    T01 --> C16["C16 Approval Gates"]
+    T01 --> C20["C20 Evidence Validation"]
+    T05["SATF-T05<br/>Excessive Delegation"]
+    T05 --> C04["C04 Delegation Provenance"]
+    T05 --> C05["C05 Contextual Authorization"]
+    T05 --> C09["C09 Least Agency"]
+    T05 --> C16["C16 Approval Gates"]
+    T09["SATF-T09<br/>Memory Poisoning"]
+    T09 --> C10["C10 Memory Integrity"]
+    T09 --> C11["C11 Knowledge Source Approval"]
+    T09 --> C19["C19 Adversarial Testing"]
+    T09 --> C20["C20 Evidence Validation"]
+    T13["SATF-T13<br/>Context Boundary Violation"]
+    T13 --> C05["C05 Contextual Authorization"]
+    T13 --> C10["C10 Memory Integrity"]
+    T13 --> C11["C11 Knowledge Source Approval"]
+    T13 --> C14["C14 Data Access Control"]
+    T13 --> C20["C20 Evidence Validation"]
+    T16["SATF-T16<br/>Prompt Injection to Tool Use"]
+    T16 --> C05["C05 Contextual Authorization"]
+    T16 --> C13["C13 Tool Access Control"]
+    T16 --> C17["C17 Fail-Closed Enforcement"]
+    T16 --> C19["C19 Adversarial Testing"]
+    T17["SATF-T17<br/>MCP / Tool Supply Chain Compromise"]
+    T17 --> C12["C12 Supply Chain Integrity"]
+    T17 --> C13["C13 Tool Access Control"]
+    T17 --> C17["C17 Fail-Closed Enforcement"]
+    T17 --> C19["C19 Adversarial Testing"]
+    T19["SATF-T19<br/>Credential Misuse"]
+    T19 --> C01["C01 Agent Identity"]
+    T19 --> C02["C02 Agent Authentication"]
+    T19 --> C05["C05 Contextual Authorization"]
+    T19 --> C18["C18 Agent UEBA"]
+    T22["SATF-T22<br/>Trust Decay"]
+    T22 --> C06["C06 Agent Risk Evaluation"]
+    T22 --> C07["C07 Trust Scoring"]
+    T22 --> C18["C18 Agent UEBA"]
+    T22 --> C20["C20 Evidence Validation"]
+    T26["SATF-T26<br/>Sandbox Escape"]
+    T26 --> C09["C09 Least Agency"]
+    T26 --> C13["C13 Tool Access Control"]
+    T26 --> C17["C17 Fail-Closed Enforcement"]
+    T26 --> C19["C19 Adversarial Testing"]
+    T27["SATF-T27<br/>Autonomous Exploit Chaining"]
+    T27 --> C06["C06 Agent Risk Evaluation"]
+    T27 --> C18["C18 Agent UEBA"]
+    T27 --> C19["C19 Adversarial Testing"]
+    T27 --> C20["C20 Evidence Validation"]
+    T30["SATF-T30<br/>Boundary Policy Evasion"]
+    T30 --> C05["C05 Contextual Authorization"]
+    T30 --> C15["C15 Objective Boundary Enforcement"]
+    T30 --> C17["C17 Fail-Closed Enforcement"]
+    T30 --> C20["C20 Evidence Validation"]
+    T31["SATF-T31<br/>Accountability Gap"]
+    T31 --> C04["C04 Delegation Provenance"]
+    T31 --> C08["C08 Human Accountability"]
+    T31 --> C16["C16 Approval Gates"]
+    T31 --> C20["C20 Evidence Validation"]
+    classDef mission fill:#7c3aed,stroke:#ffffff,color:#ffffff
+    classDef delegation fill:#f59e0b,stroke:#ffffff,color:#111827
+    classDef memory fill:#0f766e,stroke:#ffffff,color:#ffffff
+    classDef tool fill:#2563eb,stroke:#ffffff,color:#ffffff
+    classDef identity fill:#dc2626,stroke:#ffffff,color:#ffffff
+    classDef trust fill:#16a34a,stroke:#ffffff,color:#ffffff
+    classDef oob fill:#c026d3,stroke:#ffffff,color:#ffffff
+    classDef control fill:#334155,stroke:#22d3ee,color:#ffffff
+    class T01 mission
+    class T05 delegation
+    class T09,T13 memory
+    class T16,T17 tool
+    class T19 identity
+    class T22 trust
+    class T26,T27,T30,T31 oob
+    class C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20 control

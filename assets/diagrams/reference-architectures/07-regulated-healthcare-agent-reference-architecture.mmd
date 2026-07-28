@@ -1,0 +1,30 @@
+flowchart TB
+    OUT[Secure Outcomes\nSafe | Trusted | Compliant | Resilient | Expected]
+    HC[Human Controller / Clinical or Business Owner]
+    AG[Regulated Healthcare Agent]
+    QMS[Quality Management System\nDesign controls, CAPA, change control]
+    RM[Risk Management\nHazards, harms, risk controls]
+    ATF[Agent Trust Fabric\nAssess mission, goal, context, risk, behavior, evidence]
+    PDP[Ring 2 PDP / PEP\nPolicy enforcement, approval gates]
+    DATA[Regulated Data + Knowledge Sources\nClinical, product, quality, service data]
+    TOOLS[Approved Tools / Medical Product Workflows / APIs]
+    VAL[Ring 3 Validation\nGoal integrity, safety constraints, adversarial testing]
+    EVID[Evidence Package\nAudit trail, validation, traceability, assurance]
+    GOV[Governance, Telemetry and Assurance\nPolicy, compliance, evidence review]
+    RESP[Runtime Response\nConstrain, pause, rollback, recover, re-establish]
+
+    HC --> AG
+    QMS --> GOV
+    RM --> GOV
+    AG --> ATF
+    ATF --> PDP
+    PDP --> DATA
+    PDP --> TOOLS
+    DATA --> VAL
+    TOOLS --> VAL
+    VAL --> EVID
+    EVID --> GOV
+    GOV --> PDP
+    PDP --> RESP
+    RESP --> OUT
+    GOV --> OUT

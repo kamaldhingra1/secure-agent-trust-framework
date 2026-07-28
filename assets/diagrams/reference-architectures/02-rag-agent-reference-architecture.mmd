@@ -1,0 +1,32 @@
+flowchart TB
+    U[Human / Application Request]
+    A[RAG Agent]
+    ATF[Agent Trust Fabric\nAssess: identity, intent, context, goal, risk]
+    PDP[Ring 2 PDP / PEP\nContextual authorization]
+    RET[Retriever / Orchestrator]
+    KB[Knowledge Sources\nDocs, APIs, Data Stores]
+    VDB[Vector Store / Index]
+    MEM[Agent Memory]
+    POL[Data, Tool and RAG Policy]
+    VAL[Ring 3 Validation\nContext integrity, goal integrity, memory validation]
+    GOV[Governance, Telemetry and Assurance\nAdapt + Assure]
+    RESP[Runtime Response\nQuarantine memory, block retrieval, recover]
+    OUT[Secure Outcomes]
+
+    U --> A
+    A --> ATF
+    ATF --> PDP
+    PDP --> POL
+    POL --> RET
+    RET --> VDB
+    RET --> KB
+    VDB --> A
+    KB --> A
+    A --> MEM
+    MEM --> VAL
+    A --> VAL
+    VAL --> GOV
+    GOV --> PDP
+    PDP --> RESP
+    RESP --> OUT
+    GOV --> OUT

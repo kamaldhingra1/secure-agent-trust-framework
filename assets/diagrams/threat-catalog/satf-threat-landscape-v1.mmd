@@ -1,0 +1,56 @@
+flowchart TB
+    SATF["SATF Threat Landscape v1.0"]
+    SATF --> Mission["Mission & Goal Threats<br/>Mission Boundary"]
+    Mission --> T01["SATF-T01 Goal Overreach"]
+    Mission --> T02["SATF-T02 Reward Hacking"]
+    Mission --> T03["SATF-T03 Unsafe External Action"]
+    Mission --> T04["SATF-T04 Objective Manipulation"]
+    SATF --> Delegation["Delegation & Authority Threats<br/>Authority Boundary"]
+    Delegation --> T05["SATF-T05 Excessive Delegation"]
+    Delegation --> T06["SATF-T06 Delegation Escalation"]
+    Delegation --> T07["SATF-T07 Trust Chain Manipulation"]
+    Delegation --> T08["SATF-T08 Authority Inheritance Abuse"]
+    SATF --> Memory["Memory & Context Boundary Threats<br/>Context Boundary"]
+    Memory --> T09["SATF-T09 Memory Poisoning"]
+    Memory --> T10["SATF-T10 Context Poisoning"]
+    Memory --> T11["SATF-T11 Retrieval Poisoning"]
+    Memory --> T12["SATF-T12 Long-Term Memory Corruption"]
+    Memory --> T13["SATF-T13 Context Boundary Violation"]
+    SATF --> Tool["Tool & Action Threats<br/>Tool Boundary"]
+    Tool --> T14["SATF-T14 Tool Compromise"]
+    Tool --> T15["SATF-T15 Tool Abuse"]
+    Tool --> T16["SATF-T16 Prompt Injection to Tool Use"]
+    Tool --> T17["SATF-T17 MCP / Tool Supply Chain Compromise"]
+    SATF --> Identity["Identity & Credential Threats<br/>Identity Boundary"]
+    Identity --> T18["SATF-T18 Agent Identity Abuse"]
+    Identity --> T19["SATF-T19 Credential Misuse"]
+    Identity --> T20["SATF-T20 Autonomous Lateral Movement"]
+    Identity --> T21["SATF-T21 Secret Harvesting"]
+    SATF --> Trust["Trust & Evidence Threats<br/>Trust / Evidence Boundary"]
+    Trust --> T22["SATF-T22 Trust Decay"]
+    Trust --> T23["SATF-T23 Trust Manipulation"]
+    Trust --> T24["SATF-T24 Evidence Corruption"]
+    Trust --> T25["SATF-T25 Evidence Integrity Failure"]
+    SATF --> Oob["Out-of-Bound Agent Threats<br/>Multiple Trust Boundaries"]
+    Oob --> T26["SATF-T26 Sandbox Escape"]
+    Oob --> T27["SATF-T27 Autonomous Exploit Chaining"]
+    Oob --> T28["SATF-T28 Agentic Swarm Escalation"]
+    Oob --> T29["SATF-T29 Runtime Containment Failure"]
+    Oob --> T30["SATF-T30 Boundary Policy Evasion"]
+    Oob --> T31["SATF-T31 Accountability Gap"]
+    classDef root fill:#111827,stroke:#22d3ee,color:#ffffff
+    classDef mission fill:#7c3aed,stroke:#ffffff,color:#ffffff
+    classDef delegation fill:#f59e0b,stroke:#ffffff,color:#111827
+    classDef memory fill:#0f766e,stroke:#ffffff,color:#ffffff
+    classDef tool fill:#2563eb,stroke:#ffffff,color:#ffffff
+    classDef identity fill:#dc2626,stroke:#ffffff,color:#ffffff
+    classDef trust fill:#16a34a,stroke:#ffffff,color:#ffffff
+    classDef oob fill:#c026d3,stroke:#ffffff,color:#ffffff
+    class SATF root
+    class Mission,T01,T02,T03,T04 mission
+    class Delegation,T05,T06,T07,T08 delegation
+    class Memory,T09,T10,T11,T12,T13 memory
+    class Tool,T14,T15,T16,T17 tool
+    class Identity,T18,T19,T20,T21 identity
+    class Trust,T22,T23,T24,T25 trust
+    class Oob,T26,T27,T28,T29,T30,T31 oob

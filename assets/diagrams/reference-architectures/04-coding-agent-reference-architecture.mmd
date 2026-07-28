@@ -1,0 +1,30 @@
+flowchart TB
+    OUT[Secure Outcomes\nSafe | Trusted | Compliant | Resilient | Expected]
+    DEV[Human Developer / Code Owner]
+    AG[Coding Agent]
+    REPO[Source Repository\nIssues, PRs, branches]
+    ATF[Agent Trust Fabric\nAssess identity, goal, code context, behavior, risk]
+    PDP[Ring 2 PDP / PEP\nPolicy enforcement, approval gates]
+    CI[CI/CD Pipeline\nBuild, test, scan, deploy gates]
+    ART[Artifact Registry / SBOM / Provenance]
+    CLOUD[Deployment Targets\nCloud, runtime, product environment]
+    VAL[Ring 3 Validation\nCode review, test evidence, supply-chain checks]
+    GOV[Governance, Telemetry and Assurance\nPolicy, exceptions, evidence]
+    RESP[Runtime Response\nBlock merge, rollback, revoke, recover]
+
+    DEV --> AG
+    AG --> ATF
+    REPO --> ATF
+    ATF --> PDP
+    PDP --> REPO
+    PDP --> CI
+    CI --> ART
+    ART --> CLOUD
+    CI --> VAL
+    REPO --> VAL
+    ART --> VAL
+    VAL --> GOV
+    GOV --> PDP
+    PDP --> RESP
+    RESP --> OUT
+    GOV --> OUT
