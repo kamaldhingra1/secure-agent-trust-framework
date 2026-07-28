@@ -234,10 +234,11 @@ SATF Baseline 1.0 uses three coordinated views:
 - [Control Catalog](docs/09-control-catalog/README.md)
 - [SATF In Action](docs/11-satf-in-action/README.md)
 - [Threat Catalog](docs/12-threat-catalog/README.md)
-- [Ref Architectures](docs/13-refenece-architectures/README.md)
-- [Implementation Patterns](docs/14-Implementation-patterns/README.md)
-- [Appendices](docs/10-appendices/README.md)
-- [FAQ](docs/15-faq/README.md)
+- [Ref Architectures](docs/13-reference-architectures/README.md)
+- [Implementation Patterns](docs/14-Implementation-patterns/trustops/README.md)
+- [Appendices](docs/10-appendices/)
+- [FAQ](docs/15-faq/frequently-asked-questions.md)
+
 ## Baseline 1.0 status
 
 This repository represents the public/community baseline version of SATF. Internal working versions have been normalized into **Baseline 1.0** for clarity.
