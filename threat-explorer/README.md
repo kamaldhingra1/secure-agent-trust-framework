@@ -2,7 +2,7 @@
 
 Reference for threats across an agentic AI system's architecture and execution pipeline. Renders fully on GitHub — the diagrams below are native mermaid blocks, and the catalog is plain markdown tables.
 
-For the clickable, filterable version of this same data, see [`agent_threat_explorer.html`](./agent_threat_explorer.html) — deploy it with GitHub Pages (Settings → Pages → Deploy from branch → root) and it becomes a live interactive page. GitHub's markdown renderer strips inline `<script>`/`<style>`, so the interactive version can't be embedded directly in this file — Pages is the way to serve it.
+For the clickable, filterable version of this same data, see [`Agent Threat Explorer`](./agent_threat_explorer_1.html) — deploy it with GitHub Pages (Settings → Pages → Deploy from branch → root) and it becomes a live interactive page. GitHub's markdown renderer strips inline `<script>`/`<style>`, so the interactive version can't be embedded directly in this file — Pages is the way to serve it.
 
 ## Architecture overview
 
