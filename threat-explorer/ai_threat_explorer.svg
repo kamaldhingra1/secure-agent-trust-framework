@@ -47,9 +47,9 @@
 <div class="wrap">
   <h1>Agentic AI threat explorer</h1>
   <div class="article-image-container">
-  <img src="threat-explorer/SATF-Agent_Threats_Flow.png" alt="Agentic AI Threat explorer">
+  <img src="./threat-explorer/SATF-Agent_Threats_Flow.png" alt="Agentic AI Threat explorer">
 </div>
-     <div><h2>Agentic AI pipeline Stages</h2><img src="threat-explorer/agentic_pipeline_threat_stages.svg" alt="Agentic AI pipeline Stages"></div> 
+     <div><h2>Agentic AI pipeline Stages</h2><img src="./threat-explorer/agentic_pipeline_threat_stages.svg" alt="Agentic AI pipeline Stages"></div> 
 <p class="sub"><b>Filter by pipeline stage, browse by domain. Generated as a static reference — severity/likelihood tagging planned for a future iteration.</b></p>
   
   <div id="stages" class="stagebar"></div>
