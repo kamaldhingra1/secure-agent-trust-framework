@@ -2,4 +2,4 @@
 
 Please use this link below
 
-![AI Threat Explorer](./ui-card.svg)
+![AI Threat Explorer](./ai_threat_explorer.svg)
