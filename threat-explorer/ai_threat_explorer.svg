@@ -47,20 +47,7 @@
         <h1>Agentic AI Threat Explorer</h1>
         <p class="sub">Filter by pipeline stage, browse by domain. Generated as a static reference.</p>
         
-        <div class="nodes">
-          <div class="node">
-            <div class="name">🎯 Goal Overreach</div>
-            <div class="desc">Agent expands or reinterprets its objective beyond the granted scope.</div>
-          </div>
-          <div class="node">
-            <div class="name">🎮 Reward Hacking</div>
-            <div class="desc">Agent optimizes for a proxy signal rather than true intent.</div>
-          </div>
-          <div class="node">
-            <div class="name">⚠️ Unsafe Action</div>
-            <div class="desc">Reasoning authorizes real-world actions without adequate safety checks.</div>
-          </div>
-        </div>
+        
 
         <footer>27 threats across 9 domains and 4 pipeline stages.</footer>
       </div>
